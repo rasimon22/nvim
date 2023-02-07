@@ -22,4 +22,20 @@ return require('packer').startup(function(use)
   })
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
   use('tpope/vim-fugitive')
+  use {'neoclide/coc.nvim', branch = 'release'}
+  use("terrortylor/nvim-comment")
+  use {
+    's1n7ax/nvim-terminal',
+    config = function()
+        vim.o.hidden = true
+        require('nvim-terminal').setup()
+    end,
+}
+  use('mfussenegger/nvim-dap')
+  use('leoluz/nvim-dap-go')
+  use('rcarriga/nvim-dap-ui')
+  use('mortepau/codicons.nvim')
+  use('theHamsta/nvim-dap-virtual-text')
+  use('preservim/nerdtree')
+  use('APZelos/blamer.nvim')
 end)
